@@ -31,3 +31,5 @@ Procedure:
 4. Within the routes, create a file named articles.js where we can export the router variable to other parts of the folder within the application. We can use require('./routes/articles') in the server.js to use it.
 5. res.render('index', {text: "Hello"}); --> Passing an object to the index.ejs or HTML page to handle new articles.
 6. In the server.js, we use <%= VARIABLE %> to declare a variable and call it wherever needed.
+7. Check this link: https://www.npmjs.com/package/ejs for more details on how can we initiate a script or function within ejs.
+8. Update the routes for New Article button, create a new view called as new.ejs.
