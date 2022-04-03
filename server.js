@@ -13,10 +13,15 @@ app.use('/articles', articleRouter);
 app.get('/',(req, res) => {
     // res.send('Hello World - 2');
     const articles = [{
-        title: 'test article',
-        createdAt:Date.now(),
+        title: 'Test Article',
+        createdAt: new Date(),
         description: 'Test Description'
+    },
+    {
+        title: 'Test Article 2',
+        createdAt: new Date(),
+        description: 'Test Description 2'
     }];
-    res.render('index', {articles: articles});       // Instead of getting the response now, we can pass the path to the view we wanted to display and it is index.ejs
+    res.render('articles/index', {articles: articles});       // Instead of getting the response now, we can pass the path to the view we wanted to display and it is index.ejs
 })
 app.listen(5050);
