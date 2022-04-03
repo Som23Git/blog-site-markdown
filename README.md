@@ -21,3 +21,13 @@ nodemon -> It is used to hot reload the webpage whenever we make changes to the 
 Also, once nodemon is initiated, we need to add the startup script in the package.json(server.js) file.
 
 To start this, run the cmd line - "npm run devStart".
+
+
+Procedure:
+
+1. We create a server.js file to setup a view engine and initiate nodemon.
+2. Create views Folder to handle all the ejs views. Start with index.ejs
+3. Create a routes Folder to handle all the routes within the application.
+4. Within the routes, create a file named articles.js where we can export the router variable to other parts of the folder within the application. We can use require('./routes/articles') in the server.js to use it.
+5. res.render('index', {text: "Hello"}); --> Passing an object to the index.ejs or HTML page to handle new articles.
+6. In the server.js, we use <%= VARIABLE %> to declare a variable and call it wherever needed.
